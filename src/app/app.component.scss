@@ -1,0 +1,121 @@
+
+:host {
+    display: block;
+    padding: 24px 0 64px;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.title { height: 44px; }
+.logo { height: 44px; width: auto; }
+.titles { text-align: center; }
+
+.tab {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+.tab-campos {
+    padding: 2rem 0 0 2rem;
+}
+
+.tab-campos-field {
+    padding: 0 2rem 2rem 0;
+}
+
+
+.title {
+    max-width: 50%;
+    max-height: 100rem;
+}
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sub-title {
+    margin-left: 1px white;
+    max-width: 50%;
+    max-height: 100rem;
+}
+
+.sub-title-text {
+    max-width: 100%;
+    max-height: 100%;
+    color: black;
+}
+
+.tab-campos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    p { grid-column: 1 / -1; }
+}
+.tab-campos-field { width: 100%; }
+
+.tab-radios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 8px 0 4px;
+}
+.group { display: flex; flex-direction: column; gap: 8px; }
+.legend { color: #424242; font-size: 14px; }
+.radio-line { display: flex; align-items: center; gap: 20px; }
+.radio-line.wrap { flex-wrap: wrap; row-gap: 8px; }
+
+
+.upload-block { margin: 8px 0 16px; }
+.upload-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    background: #fafafa;
+    position: relative;
+    cursor: pointer;
+}
+.upload-icon { font-size: 20px; }
+.upload-text { display: flex; flex-direction: column; line-height: 1.2; }
+.upload-text strong { color: #1f1f1f; }
+.upload-text span { color: #6b6f76; }
+.upload-text small { color: #9aa0a6; }
+.upload-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.section {
+    margin: 12px 0 8px;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #6b6f76;
+}
+
+
+.div-btn-avancar {
+    max-width: 980px;
+    margin: 16px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-avancar {
+    padding: 10px 24px;
+    border-radius: 8px;
+}

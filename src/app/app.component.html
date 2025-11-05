@@ -1,0 +1,183 @@
+<div class="hero">
+    <div class="title">
+        <img class="logo" src="assets/img/logo-xbri.png" alt="XBRI">
+    </div>
+
+    <div class="titles">
+        <h4 class="kicker">{{ titlePage }}</h4>
+        <h1 class="headline">
+            <span>Preencha seus dados</span> e conte
+            <br>com a nossa ajuda!
+        </h1>
+    </div>
+</div>
+
+<mat-tab-group class="tab" dynamicHeight>
+    <mat-tab label="Informações da solicitação">
+        <div class="example-small-box mat-elevation-z4">
+
+            <h5 class="section">Identificação da compra</h5>
+
+            <div class="tab-campos">
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Primeiro nome*</mat-label>
+                    <input matInput type="text" placeholder="Primeiro nome">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Sobrenome completo*</mat-label>
+                    <input matInput type="text" placeholder="Sobrenome completo">
+                </mat-form-field>
+            </div>
+
+            <div class="tab-campos">
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>CPF ou CNPJ*</mat-label>
+                    <input matInput type="text" placeholder="CPF ou CNPJ">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>E-mail*</mat-label>
+                    <input matInput type="email" placeholder="E-mail">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Telefone com DDD*</mat-label>
+                    <input matInput type="tel" placeholder="Telefone com DDD">
+                </mat-form-field>
+            </div>
+
+            <div class="upload-block">
+                <p class="section">Anexe a nota fiscal (NF-e)*</p>
+                <div class="upload-box mat-elevation-z2" tabindex="0">
+                    <div class="upload-icon">☁</div>
+                    <div class="upload-text">
+                        <strong>Selecionar arquivo</strong>
+                        <span>Arraste seus arquivos aqui ou clique para enviar</span>
+                        <small>(até 10 MB – PNG, JPG, JPEG, GIF ou PDF)</small>
+                    </div>
+                    <input type="file" class="upload-input" />
+                </div>
+            </div>
+
+            <p class="section">Dados do veículo</p>
+            <div class="tab-campos">
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Marca*</mat-label>
+                    <mat-select placeholder="Selecione a marca">
+                        <mat-option value="chevrolet">Chevrolet</mat-option>
+                        <mat-option value="volkswagen">Volkswagen</mat-option>
+                        <mat-option value="toyota">Toyota</mat-option>
+                        <mat-option value="honda">Honda</mat-option>
+                        <mat-option value="fiat">Fiat</mat-option>
+                        <mat-option value="hyundai">Hyundai</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Modelo*</mat-label>
+                    <mat-select placeholder="Selecione o modelo">
+                        <mat-option value="onix">Onix</mat-option>
+                        <mat-option value="tracker">Tracker</mat-option>
+                        <mat-option value="gol">Gol</mat-option>
+                        <mat-option value="corolla">Corolla</mat-option>
+                        <mat-option value="civic">Civic</mat-option>
+                        <mat-option value="argo">Argo</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Ano*</mat-label>
+                    <mat-select placeholder="Selecione o ano">
+                        <mat-option *ngFor="let ano of anos" [value]="ano">{{ ano }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="tab-radios">
+                <div class="group">
+                    <label class="legend">O veículo é elétrico?*</label>
+                    <mat-radio-group class="radio-line">
+                        <mat-radio-button [value]="true">Sim</mat-radio-button>
+                        <mat-radio-button [value]="false">Não</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="group">
+                    <label class="legend">Roda original do veículo?*</label>
+                    <mat-radio-group class="radio-line">
+                        <mat-radio-button [value]="true">Sim</mat-radio-button>
+                        <mat-radio-button [value]="false">Não</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="group">
+                    <label class="legend">O veículo é blindado?*</label>
+                    <mat-radio-group class="radio-line">
+                        <mat-radio-button [value]="true">Sim</mat-radio-button>
+                        <mat-radio-button [value]="false">Não</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <p class="section">Condições de uso do pneu</p>
+            <div class="tab-campos">
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>Modelo do pneu*</mat-label>
+                    <mat-select>
+                        <mat-option value="x-line_at">X-Line AT</mat-option>
+                        <mat-option value="x-line_ht">X-Line HT</mat-option>
+                        <mat-option value="x-line_mt">X-Line MT</mat-option>
+                        <mat-option value="city_pro">City Pro</mat-option>
+                        <mat-option value="road_max">Road Max</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="tab-campos-field">
+                    <mat-label>KM percorridos com o pneu*</mat-label>
+                    <input matInput type="number" min="0" placeholder="Ex.: 25000">
+                </mat-form-field>
+            </div>
+
+            <div class="tab-radios">
+                <div class="group">
+                    <label class="legend">Qual o uso do pneu?*</label>
+                    <mat-radio-group class="radio-line">
+                        <mat-radio-button value="passeio">Passeio</mat-radio-button>
+                        <mat-radio-button value="carga">Carga</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="group">
+                    <label class="legend">Tipo de estrada*</label>
+                    <mat-radio-group class="radio-line">
+                        <mat-radio-button value="asfaltada">Asfaltada</mat-radio-button>
+                        <mat-radio-button value="terra" checked>Terra</mat-radio-button>
+                        <mat-radio-button value="pedra">Pedra</mat-radio-button>
+                        <mat-radio-button value="mista">Mista</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="group">
+                    <label class="legend">Posição de uso*</label>
+                    <mat-radio-group class="radio-line wrap">
+                        <mat-radio-button value="dianteiro_esquerdo">Dianteiro esquerdo</mat-radio-button>
+                        <mat-radio-button value="dianteiro_direito">Dianteiro direito</mat-radio-button>
+                        <mat-radio-button value="traseiro_esquerdo">Traseiro esquerdo</mat-radio-button>
+                        <mat-radio-button value="traseiro_direito">Traseiro direito</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Evidências">
+        <div class="example-large-box mat-elevation-z4">
+            Evidências
+        </div>
+    </mat-tab>
+</mat-tab-group>
+
+<div class="div-btn-avancar">
+    <button class="btn-avancar" mat-stroked-button>Avançar</button>
+</div>
